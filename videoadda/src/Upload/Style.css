@@ -1,0 +1,127 @@
+img {
+  max-height: 240px;
+  margin: 0 auto;
+}
+
+.app-container {
+  width: 500px;
+  margin: 30px auto;
+}
+
+.clear {
+  clear: both;
+}
+
+.details,
+.title {
+  text-align: center;
+  width:800;
+  height : 800;
+}
+
+.error {
+  margin-top: 4px;
+  color: red;
+}
+
+.has-error {
+  border: 1px dotted red;
+}
+
+.image-container {
+  align-items: center;
+  display: flex;
+  width: 85%;
+  height: 80%;
+  float: left;
+  margin: 15px 10px 10px 37px;
+  text-align: center;
+}
+
+.preview-container {
+  height: 335px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.placeholder-preview,
+.render-preview {
+text-align: center;
+  background-color: darkgray;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.upload-container {
+  cursor: pointer;
+  height: 300px;
+}
+.placeholder-preview1{
+
+  background-color: Grey;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+
+
+}
+.placeholder-preview2{
+  background-color: lightgray;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+
+.main{
+      float: right;
+      height: 30px;
+      width: 30px;
+      border-radius: 5px;
+      margin-top: -48px;
+      font-size: 30px;
+      color: white;
+      background-color: transparent;
+}
+.uploadbutton{
+ margin: auto;
+ margin-top:25px;
+  text-align: center;
+      height: 50px;
+      width: 200px;
+      border-radius: 5px;
+      font-size: 15px;
+      color: white;
+      background-color: Grey;
+      line-height: 50px;
+      align-items: center;
+      font-family: "Roboto","Noto",sans-serif;
+          font-weight: bold;
+          font-size: var(--ytcp-font-subheading_-_font-size,14px);
+}
+.uploadtext {
+
+    font-family: "Roboto","Noto",sans-serif;
+    font-weight: bold;
+    font-size: var(--ytcp-font-subheading_-_font-size,17px);
+    line-height: 30px;
+    margin-top: 23px;
+    }
+
+    .uploadtext1 {
+    margin-top:250px;
+           font-family: "Roboto","Noto",sans-serif;
+           font-size: var(--ytcp-font-subheading_-_font-size,12px);
+        }
+         .uploadtext2 {
+
+                   font-family: "Roboto","Noto",sans-serif;
+                   font-size: var(--ytcp-font-subheading_-_font-size,12px);
+                }
+                .uploadtext3 {
+
+                                   font-family: "Roboto","Noto",sans-serif;
+                                   font-size: var(--ytcp-font-subheading_-_font-size,12px);
+                                }
