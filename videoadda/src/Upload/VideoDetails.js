@@ -14,6 +14,7 @@ let imgs = [
   'https://res.cloudinary.com/stealthman22/image/upload/v1586308024/new-portfolio/hero/time-lapse-photography-of-waterfalls-during-sunset-210186.jpg'
 ];
 export default function VideoDetails() {
+
 const [title, setTitle] = useState("");
     const [Description, setDescription] = useState("");
     const [imageURL, setImageUrl]=useState("");
@@ -27,8 +28,143 @@ const [title, setTitle] = useState("");
         const [addCountry, setCountry] = useState("");
         const [addCategory, setCategory] = useState("");
 
+ function toggleVideoDetailsModal() {
+document.getElementById("videoelementbadge").style.color = "black";
+document.getElementById("detailsbadge").style.color = "black";
+document.getElementById("Checksbadge").style.color = "white";
+document.getElementById("VisiblityBadge").style.color = "white";
+
+document.getElementById("videoelementbadge").style.border = "9px solid";
+document.getElementById("detailsbadge").style.border = "4px solid";
+document.getElementById("Checksbadge").style.border = "4px solid";
+document.getElementById("VisiblityBadge").style.border = "4px solid";
 
 
+
+document.getElementById("step-title-1").style.color = "black";
+document.getElementById("step-title-0").style.color = "black";
+document.getElementById("step-title-3").style.color = "white";
+document.getElementById("step-title-2").style.color = "white";
+
+document.getElementById("detailsseperate").style.backgroundColor = "black";
+document.getElementById("videoelementseperate").style.backgroundColor = "white";
+document.getElementById("ChecksSeperator").style.backgroundColor = "white";
+
+ var x = document.getElementById("VideoDetails");
+   x.style.display = "none";
+    var y = document.getElementById("VideoElements");
+
+    var z=document.getElementById("Checks");
+    z.style.display = "none";
+
+    var a=document.getElementById("Visiblity");
+    a.style.display = "none";
+      if (y.style.display === "none") {
+          y.style.display = "block";
+        }
+
+    }
+function toggleOnVideoDetails(){
+
+document.getElementById("videoelementbadge").style.color = "white";
+document.getElementById("detailsbadge").style.color = "black";
+document.getElementById("Checksbadge").style.color = "white";
+document.getElementById("VisiblityBadge").style.color = "white";
+
+document.getElementById("videoelementbadge").style.border = "4px solid";
+document.getElementById("detailsbadge").style.border = "9px solid";
+document.getElementById("Checksbadge").style.border = "4px solid";
+document.getElementById("VisiblityBadge").style.border = "4px solid";
+
+document.getElementById("step-title-0").style.color = "black";
+document.getElementById("step-title-1").style.color = "white";
+document.getElementById("step-title-3").style.color = "white";
+document.getElementById("step-title-2").style.color = "white";
+
+document.getElementById("detailsseperate").style.backgroundColor = "white";
+document.getElementById("videoelementseperate").style.backgroundColor = "white";
+document.getElementById("ChecksSeperator").style.backgroundColor = "white";
+var x = document.getElementById("VideoDetails");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }
+  var y = document.getElementById("VideoElements");
+        y.style.display = "none";
+        var z=document.getElementById("Checks");
+            z.style.display = "none";
+            var a=document.getElementById("Visiblity");
+                a.style.display = "none";
+}
+function toggleOnChecks(){
+document.getElementById("videoelementbadge").style.color = "black";
+document.getElementById("detailsbadge").style.color = "black";
+document.getElementById("Checksbadge").style.color = "black";
+document.getElementById("VisiblityBadge").style.color = "white";
+
+document.getElementById("videoelementbadge").style.border = "4px solid";
+document.getElementById("detailsbadge").style.border = "4px solid";
+document.getElementById("Checksbadge").style.border = "9px solid";
+document.getElementById("VisiblityBadge").style.border = "4px solid";
+
+document.getElementById("step-title-2").style.color = "black";
+document.getElementById("step-title-0").style.color = "black";
+document.getElementById("step-title-1").style.color = "black";
+document.getElementById("step-title-3").style.color = "white";
+
+
+
+document.getElementById("detailsseperate").style.backgroundColor = "black";
+document.getElementById("videoelementseperate").style.backgroundColor = "black";
+document.getElementById("ChecksSeperator").style.backgroundColor = "white";
+
+var x = document.getElementById("VideoDetails");
+  x.style.display = "none";
+  var y = document.getElementById("VideoElements");
+        y.style.display = "none";
+        var z=document.getElementById("Checks");
+        if (z.style.display === "none") {
+            z.style.display = "block";
+          }
+          var a=document.getElementById("Visiblity");
+              a.style.display = "none";
+
+}
+
+function toggleOnVisiblity(){
+document.getElementById("videoelementbadge").style.color = "black";
+document.getElementById("detailsbadge").style.color = "black";
+document.getElementById("Checksbadge").style.color = "black";
+document.getElementById("VisiblityBadge").style.color = "black";
+
+document.getElementById("videoelementbadge").style.border = "4px solid";
+document.getElementById("detailsbadge").style.border = "4px solid";
+document.getElementById("Checksbadge").style.border = "4px solid";
+document.getElementById("VisiblityBadge").style.border = "9px solid";
+
+document.getElementById("step-title-3").style.color = "black";
+document.getElementById("step-title-0").style.color = "black";
+document.getElementById("step-title-2").style.color = "black";
+document.getElementById("step-title-1").style.color = "black";
+
+document.getElementById("detailsseperate").style.backgroundColor = "black";
+document.getElementById("videoelementseperate").style.backgroundColor = "black";
+document.getElementById("ChecksSeperator").style.backgroundColor = "black";
+
+var x = document.getElementById("VideoDetails");
+  x.style.display = "none";
+  var y = document.getElementById("VideoElements");
+        y.style.display = "none";
+        var z=document.getElementById("Checks");
+
+            z.style.display = "none";
+
+          var a=document.getElementById("Visiblity");
+              a.style.display = "none";
+               if (a.style.display === "none") {
+                          a.style.display = "block";
+                        }
+
+}
 const Private = [
     { value: 'Private', label:'Private'},
     { value: 'Public', label:'Public'}
@@ -132,38 +268,38 @@ return (
 <div className="stepper.ytcp-stepper">
 <div class="step-and-separator style-scope ytcp-stepper">
 
-<button style={{ width: '210px'}} class=" hovercolor step remove-default-style style-scope ytcp-stepper" id="step-badge-0" test-id="DETAILS" state="active" step-index="0">
-<div style={{'font-weight': 'bold'}} class="step-title style-scope ytcp-stepper" id="step-title-0">Details</div>
+<div onClick={toggleOnVideoDetails} style={{ width: '210px'}} class=" hovercolor step remove-default-style style-scope ytcp-stepper" id="step-badge-0" test-id="DETAILS" state="active" step-index="0">
+<div style={{'font-weight': 'bold',color:'black'}} class="step-title style-scope ytcp-stepper" id="step-title-0">Details</div>
 <br/>
-<div class="badge"></div>
-</button>
-<div class="separator  style-scope ytcp-stepper"></div>
+<div id='detailsbadge' style={{color:'black',border: '9px solid'}} class="badge"></div>
+</div>
+<div id='detailsseperate' class="separator  style-scope ytcp-stepper"></div>
 
-<button style={{ width: '210px'}} class="hovercolor step remove-default-style style-scope ytcp-stepper" id="step-badge-0" test-id="DETAILS" state="active" step-index="0">
-<div style={{ 'font-weight': 'bold','margin-left': '35px'}}  class="step-title style-scope ytcp-stepper" id="step-title-0">Video Elements</div>
+<div onClick={toggleVideoDetailsModal} style={{ width: '210px'}} class="hovercolor step remove-default-style style-scope ytcp-stepper" >
+<div  style={{ 'font-weight': 'bold','margin-left': '35px'}}  class="step-title style-scope ytcp-stepper" id="step-title-1">Video Elements</div>
 <br/>
-<div class="badge1"></div>
-</button>
-<div class="separator1 style-scope ytcp-stepper"></div>
+<div id='videoelementbadge' onClick={toggleVideoDetailsModal} class="badge1"></div>
+</div>
+<div id='videoelementseperate' class="separator1 style-scope ytcp-stepper"></div>
 
-<button style={{ width: '210px',"margin-left":"129px"}} class="hovercolor step remove-default-style style-scope ytcp-stepper" id="step-badge-0" test-id="DETAILS" state="active" step-index="0">
-<div style={{'font-weight': 'bold'}} class="step-title style-scope ytcp-stepper" id="step-title-3">Checks</div>
+<div onClick={toggleOnChecks} style={{ width: '210px',"margin-left":"129px"}} class="hovercolor step remove-default-style style-scope ytcp-stepper" id="step-badge-0" test-id="DETAILS" state="active" step-index="0">
+<div style={{'font-weight': 'bold'}} class="step-title style-scope ytcp-stepper" id="step-title-2">Checks</div>
 <br/>
-<div class="badge"></div>
-</button>
-<div class="separator2 style-scope ytcp-stepper"></div>
+<div id='Checksbadge' class="badge"></div>
+</div>
+<div id='ChecksSeperator' class="separator2 style-scope ytcp-stepper"></div>
 
-<button style={{ width: '210px',"margin-left":"65px"}} class="hovercolor step remove-default-style style-scope ytcp-stepper" id="step-badge-0" test-id="DETAILS" state="active" step-index="0">
-<div style={{'font-weight': 'bold'}} class="step-title style-scope ytcp-stepper" id="step-title-0">Visiblity</div>
+<div onClick={toggleOnVisiblity}  style={{ width: '210px',"margin-left":"65px"}} class="hovercolor step remove-default-style style-scope ytcp-stepper">
+<div  style={{'font-weight': 'bold'}} class="step-title style-scope ytcp-stepper" id="step-title-3">Visiblity</div>
 <br/>
-<div class="badge3"></div>
-</button>
-
+<div id='VisiblityBadge' class="badge3"></div>
 </div>
 
 </div>
 
-<div style={{'overflow-y' : 'scroll' , height : '500px'}}>
+</div>
+
+<div id='VideoDetails' style={{'overflow-y' : 'scroll' , height : '500px'}}>
 
     <label style={{'margin-bottom': '5px','font-weight': 'bold'}}>Title</label>
     <textarea onChange={handleChangeTitle} style={{color:'black'}} id="w3review" rows="4" cols="50">
@@ -214,25 +350,41 @@ return (
                    <input style={{'margin-top': '5px'}} type="text" id="country" onChange={handleCountry} style={{color:'black',"background-color":'white',width:'300px'}} />
                    <label style={{'margin-bottom': '0px','font-weight': 'bold'}} >Category</label>
                     <input style={{'margin-top': '5px'}} type="text" id="category" onChange={handleCategory} style={{color:'black',"background-color":'white',width:'300px'}} />
-            <label>Add links</label><br/>
-             <input type="text" id="addlinks" onChange={handleChangeLinks} style={{color:'black',"background-color":'white',width:'300px'}} />
-             <label>Add subtitles</label><br/>
-             <input type="text" id="addsubtitles" onChange={handleChangeSubtitles} style={{color:'black',"background-color":'white',width:'300px'}} />
-              <label>Copyright</label><br/>
-             <input type="text" id="copyright" onChange={handleCopyrights} style={{color:'black',"background-color":'white',width:'300px'}} />
 
-      <div onChange={handlePublicVideo}>
-                    <input style={{color:'black'}} type="radio" value="true" name="Video" /> Public
-                    <input style={{color:'black'}} type="radio" value="false" name="Video" /> Private
-                  </div>
-                  <label>Scheduled Video</label><br/>
-                  <input onChange={handleSchedule} type="date" id="schedule" style={{color:'black',"background-color":'white',width:'300px'}} />
+
+
+
 
       </div>
+<div id='VideoElements' style={{display:'none'}}>
+<label style={{'margin-bottom': '0px','font-weight': 'bold'}} >Video elements</label>
+<label style={{'margin-bottom': '5px'}} >Use cards and an end screen to show viewers related videos, websites, and calls to action. Learn more</label>
 
+ <label style={{'margin-bottom': '0px','font-weight': 'bold'}} >Add links</label>
+             <input style={{'margin-bottom': '5px'}} type="text" id="addlinks" onChange={handleChangeLinks} style={{color:'black',"background-color":'white',width:'300px'}} />
+             <label style={{'margin-bottom': '0px','font-weight': 'bold'}}>Add subtitles</label>
+             <input style={{'margin-bottom': '5px'}} type="text" id="addsubtitles" onChange={handleChangeSubtitles} style={{color:'black',"background-color":'white',width:'300px'}} />
+</div>
 
-<button style={{width:'150px',"margin-left":'550px'}} onClick={onSubmit} type="button">Submit!</button>
-       </form>
+<div id='Checks' style={{display:'none'}}>
+<label style={{'margin-bottom': '0px','font-weight': 'bold'}}>Checks</label>
+<label style={{'margin-bottom': '5px'}} >We’ll check your video for issues that may restrict its visibility and then you will have the opportunity to fix issues before publishing your video. Learn more </label>
+<label style={{'margin-bottom': '0px','font-weight': 'bold'}} >Copyright</label>
+             <input style={{'margin-bottom': '5px'}} type="text" id="copyright" onChange={handleCopyrights} style={{color:'black',"background-color":'white',width:'300px'}} />
+<br/><br/><label style={{'margin-bottom': '5px'}}  >Remember: These check results aren’t final. Issues may come up in the future that impact your video. Learn more </label>
+</div>
+<div id='Visiblity' style={{display:'none'}}>
+<label style={{'margin-bottom': '0px','font-weight': 'bold'}} >Visibility</label>
+<label style={{'margin-bottom': '5px'}}>Choose when to publish and who can see your video</label>
+<div onChange={handlePublicVideo}>
+                    <input style={{color:'black', 'display': 'block','height': '25px','width': '35%' ,'margin-bottom':'-20px'}}  type="radio" value="true" name="Video" /> Public
+                    <input style={{color:'black', 'display': 'block','height': '25px','width': '35%' ,'margin-bottom':'-20px'}}  type="radio" value="false" name="Video" /> Private
+                  </div>
+                  <label style={{'margin-bottom': '0px','font-weight': 'bold'}} >Scheduled Video</label>
+                  <input onChange={handleSchedule} type="date" id="schedule" style={{color:'black',"background-color":'white',width:'300px'}} />
+<button style={{width:'150px',"margin-left":'550px'}} onClick={onSubmit} type="button">Submit</button>
+</div>
+</form>
 );
 }
 
