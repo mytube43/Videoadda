@@ -122,34 +122,69 @@ formData.append("category",{addCategory}.addCategory);
 
     }
 return (
-<form onSubmit={onSubmit} className={`placeholder-preview1`} style={{ display: 'block', width: '70%' , height : '100%'}}>
+<form onSubmit={onSubmit} className={`placeholder-preview1`} style={{  display: 'block', width: '70%' , height : '80%'}}>
 <div className="">
 
-             <h2 style={{'margin-top': '-28px'}}>Video Details</h2>
-             <button className="main">X</button>
+             <h2 style={{'margin-top': '-28px', 'border-bottom-style': '','border-bottom-color': 'white', 'margin-bottom':'5px'}}>Upload Video Details</h2>
+             <button  className="main">X</button>
 </div>
-<div>
-<button style={{width:'150px',"margin-left":'750px'}} onClick={onSubmit} type="button">Submit!</button>
-    <label>Title</label><br/>
+
+<div className="stepper.ytcp-stepper">
+<div class="step-and-separator style-scope ytcp-stepper">
+
+<button style={{ width: '210px'}} class=" hovercolor step remove-default-style style-scope ytcp-stepper" id="step-badge-0" test-id="DETAILS" state="active" step-index="0">
+<div style={{'font-weight': 'bold'}} class="step-title style-scope ytcp-stepper" id="step-title-0">Details</div>
+<br/>
+<div class="badge"></div>
+</button>
+<div class="separator  style-scope ytcp-stepper"></div>
+
+<button style={{ width: '210px'}} class="hovercolor step remove-default-style style-scope ytcp-stepper" id="step-badge-0" test-id="DETAILS" state="active" step-index="0">
+<div style={{ 'font-weight': 'bold','margin-left': '35px'}}  class="step-title style-scope ytcp-stepper" id="step-title-0">Video Elements</div>
+<br/>
+<div class="badge1"></div>
+</button>
+<div class="separator1 style-scope ytcp-stepper"></div>
+
+<button style={{ width: '210px',"margin-left":"129px"}} class="hovercolor step remove-default-style style-scope ytcp-stepper" id="step-badge-0" test-id="DETAILS" state="active" step-index="0">
+<div style={{'font-weight': 'bold'}} class="step-title style-scope ytcp-stepper" id="step-title-3">Checks</div>
+<br/>
+<div class="badge"></div>
+</button>
+<div class="separator2 style-scope ytcp-stepper"></div>
+
+<button style={{ width: '210px',"margin-left":"65px"}} class="hovercolor step remove-default-style style-scope ytcp-stepper" id="step-badge-0" test-id="DETAILS" state="active" step-index="0">
+<div style={{'font-weight': 'bold'}} class="step-title style-scope ytcp-stepper" id="step-title-0">Visiblity</div>
+<br/>
+<div class="badge3"></div>
+</button>
+
+</div>
+
+</div>
+
+<div style={{'overflow-y' : 'scroll' , height : '500px'}}>
+
+    <label style={{'margin-bottom': '5px','font-weight': 'bold'}}>Title</label>
     <textarea onChange={handleChangeTitle} style={{color:'black'}} id="w3review" rows="4" cols="50">
       Video details
       </textarea>
-      <br/><br/>
-      <label>Description</label><br/>
-    <textarea onChange={handleChangeDecsription} style={{color:'black'}} id="w3review1" rows="4" cols="50">
+      <br/>
+      <label style={{'margin-bottom': '5px','font-weight': 'bold'}}>Description</label>
+    <textarea onChange={handleChangeDecsription} style={{color:'black', width:'420px', height:'170px'}} id="w3review1" rows="4" cols="50">
       Video Description
       </textarea>
-      <br/><br/>
-      <label>Thumbnail</label><br/><fontsize>
-      <label  >Select or upload a picture that shows what's in your video. A good thumbnail stands out and draws viewers' attention.</label></fontsize>
+      <br/>
+      <label style={{'margin-bottom': '0px','font-weight': 'bold'}}>Thumbnail</label>
+      <label style={{'margin-top': '5px'}}>Select or upload a picture that shows what's in your video. A good thumbnail stands out and draws viewers' attention.</label>
 
-      <br/><br/>
-      <img onClick={setImageUrlupdate} src={imgs[0]} width="120" height="70" style={{ padding: 30 }}/>
-      <img onClick={setImageUrlupdate} src={imgs[1]} width="120" height="70" style={{ padding: 30 }}/>
-      <img onClick={setImageUrlupdate} src={imgs[2]} width="120" height="70" style={{ padding: 30 }}/>
-      <br/><br/>
-      <label>Playlists</label><br/><fontsize>
-      <label  >Add your video to one or more playlists. Playlists can help viewers discover your content faster.</label></fontsize>
+      <br/>
+      <img class="Thumbnail" onClick={setImageUrlupdate} src={imgs[0]} width="120" height="70" style={{  }}/>
+      <img class="Thumbnail" onClick={setImageUrlupdate} src={imgs[1]} width="120" height="70" style={{ 'margin-left' :'15px' }}/>
+      <img class="Thumbnail" onClick={setImageUrlupdate} src={imgs[2]} width="120" height="70" style={{ 'margin-left' :'15px' }}/>
+      <br/>
+      <label style={{'margin-bottom': '0px','font-weight': 'bold'}}>Playlists</label>
+      <label style={{'margin-top': '5px'}}>Add your video to one or more playlists. Playlists can help viewers discover your content faster.</label>
       <br/>
 
       <select style={{color:'black'}}   onChange={handleChangeOne}>
@@ -157,41 +192,46 @@ return (
                                 <option key={index} value={item.value}>{item.label}</option>
                             ))}
                         </select>
-      <br/><br/>
+      <br/>
       <div>
+      <label style={{'margin-bottom': '0px','font-weight': 'bold'}}>Audience</label>
       <fontsizewidth>
-      <label  >Features like personalized ads and notifications won’t be available on videos made for kids. Videos that are set as made for kids by you are more likely to be recommended alongside other kids’ videos.</label></fontsizewidth>
-      <br/><br/>
+      <label style={{'margin-top': '5px'}}>Features like personalized ads and notifications won’t be available on videos made for kids. Videos that are set as made for kids by you are more likely to be recommended alongside other kids’ videos.</label></fontsizewidth>
+      <br/>
        <div onChange={handleAdultVideo}>
-              <input style={{color:'black'}} type="radio" value="true" name="adult" /> Yes, it's made for kids
-              <input style={{color:'black'}} type="radio" value="false" name="adult" /> No, it's not made for kid
+              <input style={{color:'black', 'display': 'block','height': '25px','width': '35%' ,'margin-bottom':'-20px'}} type="radio" value="true" name="adult" /> Yes, it's made for kids
+              <br/>
+              <input style={{color:'black', 'display': 'block','height': '25px','width': '35%','margin-bottom':'-20px' }} type="radio" value="false" name="adult" /> No, it's not made for kid
             </div>
 
       </div>
+      <br/>
+       <label style={{'margin-bottom': '0px','font-weight': 'bold'}}>Tags</label>
+        <textarea onChange={handleChangeTags} style={{color:'black','margin-top': '5px'}} id="tags" rows="4" cols="50">
+            Tags
+            </textarea>
+             <label style={{'margin-bottom': '0px','font-weight': 'bold'}} >Country</label>
+                   <input style={{'margin-top': '5px'}} type="text" id="country" onChange={handleCountry} style={{color:'black',"background-color":'white',width:'300px'}} />
+                   <label style={{'margin-bottom': '0px','font-weight': 'bold'}} >Category</label>
+                    <input style={{'margin-top': '5px'}} type="text" id="category" onChange={handleCategory} style={{color:'black',"background-color":'white',width:'300px'}} />
+            <label>Add links</label><br/>
+             <input type="text" id="addlinks" onChange={handleChangeLinks} style={{color:'black',"background-color":'white',width:'300px'}} />
+             <label>Add subtitles</label><br/>
+             <input type="text" id="addsubtitles" onChange={handleChangeSubtitles} style={{color:'black',"background-color":'white',width:'300px'}} />
+              <label>Copyright</label><br/>
+             <input type="text" id="copyright" onChange={handleCopyrights} style={{color:'black',"background-color":'white',width:'300px'}} />
+
+      <div onChange={handlePublicVideo}>
+                    <input style={{color:'black'}} type="radio" value="true" name="Video" /> Public
+                    <input style={{color:'black'}} type="radio" value="false" name="Video" /> Private
+                  </div>
+                  <label>Scheduled Video</label><br/>
+                  <input onChange={handleSchedule} type="date" id="schedule" style={{color:'black',"background-color":'white',width:'300px'}} />
+
       </div>
-        <label>Tags</label><br/>
-  <textarea onChange={handleChangeTags} style={{color:'black'}} id="tags" rows="4" cols="50">
-      Tags
-      </textarea>
-      <label>Add links</label><br/>
-       <input type="text" id="addlinks" onChange={handleChangeLinks} style={{color:'black',"background-color":'white',width:'300px'}} />
-       <label>Add subtitles</label><br/>
-       <input type="text" id="addsubtitles" onChange={handleChangeSubtitles} style={{color:'black',"background-color":'white',width:'300px'}} />
-        <label>Copyright</label><br/>
-       <input type="text" id="copyright" onChange={handleCopyrights} style={{color:'black',"background-color":'white',width:'300px'}} />
-
-<div onChange={handlePublicVideo}>
-              <input style={{color:'black'}} type="radio" value="true" name="Video" /> Public
-              <input style={{color:'black'}} type="radio" value="false" name="Video" /> Private
-            </div>
-            <label>Scheduled Video</label><br/>
-            <input onChange={handleSchedule} type="date" id="schedule" style={{color:'black',"background-color":'white',width:'300px'}} />
- <label>Country</label><br/>
- <input type="text" id="country" onChange={handleCountry} style={{color:'black',"background-color":'white',width:'300px'}} />
- <label>Category</label><br/>
-  <input type="text" id="category" onChange={handleCategory} style={{color:'black',"background-color":'white',width:'300px'}} />
 
 
+<button style={{width:'150px',"margin-left":'550px'}} onClick={onSubmit} type="button">Submit!</button>
        </form>
 );
 }
